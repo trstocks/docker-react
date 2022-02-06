@@ -10,5 +10,6 @@ RUN npm run build
 
 # Run phase
 FROM nginx 
+EXPOSE 80
 # Copy from folder build phase to nginx static content area
 COPY --from=builder /app/build /usr/share/nginx/html
